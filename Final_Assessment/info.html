@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Fatemeh Zahedi </title>
+    <meta charset="UTF-8">
+    <link href="normalize.css" rel="stylesheet">
+    <script src = "info.js"> </script>
+</head>
+
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Nazly Handmade</h1>
+            <a href="https://www.etsy.com/ca/shop/NazlyHandmade?ref=search_shop_redirect" target="_blank">
+            <img src="img/nazlylogo.jpg" alt="NazlyHandmade logo">
+            </a>
+        </header>
+    </div>
+
+
+    <div class ="navigation">
+        <h3>Navigation</h3>
+        <nav class="nav">
+            <ul>	  
+              <li><a href="honesty.html">Home</a></li>
+              <li><a href="info.html">Sign in</a></li>
+              <li><a href="reflection.html">Reflection</a></li>
+            </ul>
+          </nav>
+    </div>
+
+
+    <section class="main">
+        <div class="header">
+            SIGN UP
+        </div>
+    <div class="forms">
+
+        <form name="signup" method="POST" action="https://httpbin.org/post" onsubmit="return validation();">
+        <div class = "label"> 
+            <p style="text-align: left;"><input type="text" name="firstname" required 
+                placeholder="First name" 
+                pattern="^[A-Z][a-z]*"
+                title="Must start with a cap and only alphabetallowed.">
+            </p>
+
+            <p style="text-align: left;"><input type="text" name="lastname" required 
+            placeholder="Last name" 
+            pattern="^[A-Z][a-z]*"
+            title="Must start with a cap and only alphabetallowed.">
+            </p>
+            
+            <p style="text-align: left;"><input type="password" name="password" 
+            placeholder="Enter password:" required
+            title="must be 6characters long,must start with an alphabet, must have atleast 1 digit and 1 uppercase.">
+        </p>
+            
+            <p style="text-align: left;"><input type="password" name="confirmedpwd" 
+            placeholder="Confirm password:" required
+            title="The password strings must match.">
+        </p>
+            
+        <p style="text-align: left;"><input type="text" name="usrname" 
+            placeholder="Username" required
+            title="username must start with an alphabet, must have at least 6 characters.">
+        </p>     
+       </div> 
+            <br>
+            <p style="text-align: left;">Education Level:<br> <input type="text" list="levels" name="level" placeholder="- select -" value=""
+                title="click and choose from one of the following.">
+                <datalist id="levels">
+                    <option value="Technical Diploma">Technical Diploma</option>
+                    <option value="College Diploma">College Diploma</option>
+                    <option value="Bachelor's Degree">Bachelor's Degree</option>
+                    <option value="Master's Degree">Master's Degree</option>
+                    <option value="Others">Others</option>
+                </datalist>
+            </p> 
+            <br>
+        
+            <p style="text-align: left;">Education Status: <label><input type="radio" name="status" value="Graduated" required>Graduated</label>
+                <label><input type="radio" name="status" value="Current enrolled" required>Current enrolled</label>
+                <label><input type="radio" name="status" value="Did not graduate" required>Did not graduate</label>
+            </p> 
+            <br>
+            <br>
+            <p style="text-align: left;">Email:<br>  <input type="email" name = "email" placeholder="Enter email" required></p>
+            <br>
+            <br>
+            <p style="text-align: left;">Age: <br><input type="number" name="age" min="18" max="60" required
+                title="must be between 18-60."></p> 
+            <br>
+
+            <input type="hidden" name="lastName" id="lastName" value="Zahedi" />
+            <input type="hidden" name="studentId" id="studentId" value="165340183" />
+        
+            <button type="submit">Submit</button>&nbsp;&nbsp;&nbsp;&nbsp;
+            <button type="reset" value="reset">Reset</button>
+
+        </form>
+    </div>
+    </section>
+
+
+    <div class="sidepanelinfo">
+        <h3>Messages for You</h3>
+        <label id="PassErr"></label> <br>
+        <label id="ConPassErr"></label> <br>
+        <label id="UsrErr"></label> <br>
+    </div>
+
+
+    <footer>
+        <div>
+            &copy; 2020 Fatemeh Zahedi
+        </div>
+    </footer>
+</body>
+</html>
